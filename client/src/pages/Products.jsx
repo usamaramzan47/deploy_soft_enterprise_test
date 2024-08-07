@@ -25,7 +25,7 @@ const Products = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const res = await axios.post('http://localhost:5000/products', formData, {
+            const res = await axios.post('https://deploy-soft-enterprise-test.onrender.com/products', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${token}`
