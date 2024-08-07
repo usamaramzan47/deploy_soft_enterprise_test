@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const User = require('../models/user.js');
+const User = require('../models/User');
 require('dotenv').config();
 
 // run once for create user with hash password
