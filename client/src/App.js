@@ -4,15 +4,14 @@ import Login from './pages/Login';
 import Products from './pages/Products';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useUser } from './context/Auth'
 import { Navigate } from 'react-router-dom';
 function App() {
 
-  const { user } = useUser();
+  
 
-
+const token = localStorage.getItem('token')
   const ProtectedRoute = ({ children }) => {
-    if (!user?.token) return <Navigate to="/login" />;
+    if (!token) return <Navigate to="/login" />;
     return children;
   };
   return (
