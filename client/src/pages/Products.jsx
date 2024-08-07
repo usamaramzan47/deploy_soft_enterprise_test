@@ -81,8 +81,8 @@ const Products = () => {
     const handleClear = () => {
 
         reset(); // reset all fields
-        setImages(null);
-        setImagePreviews(null);
+        setImages([]);
+        setImagePreviews([]);
     }
 
     // handle Logout 
